@@ -68,5 +68,5 @@ jobs:
           port: ${{ secrets.VPS_SSH_PORT }}
           script: |
             cd ${{ secrets.VPS_PROJECT_PATH }}
-            docker-compose pull
-            docker-compose up --force-recreate -d
+            docker compose pull
+            docker compose up --force-recreate -d
