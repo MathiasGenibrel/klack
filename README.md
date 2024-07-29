@@ -1,30 +1,120 @@
-# React + TypeScript + Vite
+<a id="readme-top"></a>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-Currently, two official plugins are available:
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/MathiasGenibrel/klack">
+  <img src="public/Klack.png" alt="Logo" width="80" height="80">
+  </a>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<h3 align="center">Klack</h3>
+  <p align="center">
+    A project to learn how to set up animations in a React application and deploy it using GitHub Actions on a personal VPS.
+    <br />
+    <a href="https://github.com/MathiasGenibrel/klack/tree/main/src"><strong>Explore the code »</strong></a>
+    <br />
+    <br />
+    <a href="https://klack.mathias.run/">View Demo</a>
+  </p>
+</div>
 
-## Expanding the ESLint configuration
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#license">License</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+<!-- ABOUT THE PROJECT -->
 
-- Configure the top-level `parserOptions` property like this:
+## About The Project
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+This project is a more or less identical replica of the [tryklack.com](https://tryklack.com/) website. The goal is to learn how to set up animations in a React application, as well as to deploy it on my personal VPS using GitHub Actions.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+- [![React][React.js]][React-url]
+- [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
+- [![Framer Motion][Framer-Motion]][Framer-Motion-url]
+- [![Vite][Vite]][Vite-url]
+- [![Docker][Docker]][Docker-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+To get a local copy up and running, follow these example steps.
+
+### Prerequisites
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+### Installation
+
+- Clone the repo
+  ```sh
+  git clone https://github.com/MathiasGenibrel/klack.git
+  ```
+  
+- Install NPM packages
+  ```sh
+  npm install
+  ```
+
+- Start the development server
+  ```sh
+  npm run dev
+  ```
+
+## Roadmap
+
+- [ ] Deploy the application using Docker
+- [ ] Automate deployment with GitHub Actions
+- [ ] Setup animations with Framer Motion
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## License
+
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Mathias Genibrel - [@mithivi](https://x.com/mithivi) - <a href="mailto:contact@mathias.run">contact@mathias.run</a>
+
+Project Link: [https://github.com/MathiasGenibrel/klack](https://github.com/MathiasGenibrel/klack)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
