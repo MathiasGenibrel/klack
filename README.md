@@ -1,9 +1,5 @@
 <a id="readme-top"></a>
 
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -57,11 +53,11 @@ This project is a more or less identical replica of the [tryklack.com](https://t
 
 ### Built With
 
-- [![React][React.js]][React-url]
-- [![TailwindCSS][TailwindCSS]][TailwindCSS-url]
-- [![Framer Motion][Framer-Motion]][Framer-Motion-url]
-- [![Vite][Vite]][Vite-url]
-- [![Docker][Docker]][Docker-url]
+- [![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
+- [![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+- [![Framer Motion](https://img.shields.io/badge/Framer-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/motion/)
+- [![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)](https://vitejs.dev/)
+- [![Docker](https://img.shields.io/badge/Docker-2CA5E0?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -77,14 +73,15 @@ To get a local copy up and running, follow these example steps.
   ```sh
   npm install npm@latest -g
   ```
+
 ### Installation
 
 - Clone the repo
   ```sh
   git clone https://github.com/MathiasGenibrel/klack.git
   ```
-  
 - Install NPM packages
+
   ```sh
   npm install
   ```
@@ -108,9 +105,8 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Mathias Genibrel - [@mithivi](https://x.com/mithivi) - <a href="mailto:contact@mathias.run">contact@mathias.run</a>
