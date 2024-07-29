@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Header } from "./header/header.tsx";
+import { Header } from "./header/Header.tsx";
 
 function App() {
   return (

@@ -1,25 +1,78 @@
 import { FC } from "react";
+import { motion, Transition, Variants } from "framer-motion";
 
-export const CompanyLogo: FC = () => {
+interface CompanyLogoProps {
+  isHover: boolean;
+}
+
+enum Position {
+  CENTER = 0,
+  FULL = 25,
+}
+
+enum Opacity {
+  VISIBLE = 1,
+  TRANSPARENT = 0,
+}
+
+const transitionConfig: Transition = {
+  bounce: false,
+  duration: 0.125,
+};
+
+const variantsLetterK: Variants = {
+  initial: {
+    x: Position.CENTER,
+    opacity: Opacity.VISIBLE,
+  },
+  animate: (isHover: boolean) => ({
+    x: isHover ? -Position.FULL : Position.CENTER,
+    opacity: isHover ? Opacity.TRANSPARENT : Opacity.VISIBLE,
+  }),
+};
+
+const variantsArrowRight: Variants = {
+  initial: {
+    x: Position.FULL,
+    opacity: Opacity.TRANSPARENT,
+  },
+  animate: (isHover: boolean) => ({
+    x: isHover ? Position.CENTER : Position.FULL,
+    opacity: isHover ? Opacity.VISIBLE : Opacity.TRANSPARENT,
+  }),
+};
+
+export const CompanyLogo: FC<CompanyLogoProps> = ({ isHover }) => {
   return (
-    <svg
-      className={"h-10"}
-      viewBox="0 0 64 64"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g clipPath="url(#clip0_2798_16)">
-        <path d="M0 0H64V64H0V0Z" fill="#292524" />
-        <path
-          d="M20.4444 47.8401H27.5004C27.7362 47.8401 27.9623 47.7464 28.129 47.5797C28.2957 47.413 28.3893 47.1869 28.3893 46.9512V40.2578C28.3894 40.0677 28.4505 39.8827 28.5635 39.7298L30.4249 37.2089C30.4598 37.1617 30.5058 37.1239 30.5588 37.0988C30.6119 37.0737 30.6704 37.0621 30.729 37.0651C30.7876 37.0681 30.8446 37.0856 30.8948 37.1159C30.9451 37.1463 30.987 37.1886 31.0169 37.2392L37.0471 47.4045C37.1258 47.5372 37.2376 47.6471 37.3717 47.7235C37.5057 47.7999 37.6573 47.84 37.8115 47.8401H45.9804C46.1387 47.84 46.2941 47.7976 46.4305 47.7174C46.567 47.6372 46.6795 47.522 46.7565 47.3837C46.8336 47.2454 46.8723 47.0891 46.8687 46.9309C46.865 46.7726 46.8192 46.6182 46.736 46.4836L37.5395 31.6249C37.4456 31.4733 37.3994 31.297 37.4071 31.1188C37.4147 30.9406 37.4757 30.7689 37.5822 30.6258L46.0658 19.1965C46.164 19.0642 46.2235 18.9072 46.2376 18.743C46.2518 18.5788 46.22 18.414 46.1459 18.2668C46.0717 18.1197 45.9581 17.996 45.8178 17.9096C45.6775 17.8233 45.5159 17.7777 45.3511 17.7778H38.2987C38.1585 17.778 38.0205 17.8112 37.8956 17.8748C37.7708 17.9385 37.6628 18.0307 37.5804 18.1441L28.6044 30.4605C28.5894 30.4813 28.5696 30.4983 28.5467 30.51C28.5239 30.5217 28.4986 30.5279 28.4729 30.5281C28.4507 30.5281 28.4295 30.5193 28.4138 30.5036C28.3981 30.4879 28.3893 30.4667 28.3893 30.4445V18.6667C28.3893 18.431 28.2957 18.2049 28.129 18.0382C27.9623 17.8715 27.7362 17.7778 27.5004 17.7778H20.4444C20.2087 17.7778 19.9826 17.8715 19.8159 18.0382C19.6492 18.2049 19.5555 18.431 19.5555 18.6667V46.9512C19.5555 47.1869 19.6492 47.413 19.8159 47.5797C19.9826 47.7464 20.2087 47.8401 20.4444 47.8401Z"
-          fill="#FFF7ED"
-        />
-      </g>
-      <defs>
-        <clipPath id="clip0_2798_16">
-          <rect width="64" height="64" rx="16" fill="white" />
-        </clipPath>
-      </defs>
-    </svg>
+    <div className={"overflow-hidden rounded-xl"}>
+      <svg
+        className="relative h-10 w-10 fill-current"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 36"
+        aria-hidden="true"
+      >
+        <path d="M0 0h36v36H0z"></path>
+        <motion.path
+          key={"letter-k"}
+          transition={transitionConfig}
+          variants={variantsLetterK}
+          custom={isHover}
+          initial={"initial"}
+          animate={"animate"}
+          className="ease absolute translate-x-0 text-orange-50"
+          d="M11.5 26.91h3.969a.5.5 0 0 0 .5-.5v-3.765a.5.5 0 0 1 .098-.297l1.047-1.418a.2.2 0 0 1 .333.017l3.392 5.718a.5.5 0 0 0 .43.245h4.595a.5.5 0 0 0 .425-.763l-5.173-8.358a.5.5 0 0 1 .024-.562l4.772-6.429A.5.5 0 0 0 25.51 10h-3.967a.5.5 0 0 0-.404.206l-5.049 6.928a.092.092 0 0 1-.074.038.047.047 0 0 1-.047-.047V10.5a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0-.5.5v15.91a.5.5 0 0 0 .5.5Z"
+        ></motion.path>
+        <motion.path
+          key={"arrow-right"}
+          transition={transitionConfig}
+          variants={variantsArrowRight}
+          custom={isHover}
+          initial={"initial"}
+          animate={"animate"}
+          className="ease absolute translate-x-full text-orange-50"
+          d="M18.032 11.218a1 1 0 0 0-1.414 0l-6.075 6.075a1 1 0 0 0 0 1.414l6.075 6.075a1 1 0 0 0 1.414-1.414L13.664 19H24.75a1 1 0 1 0 0-2H13.664l4.368-4.368a1 1 0 0 0 0-1.414Z"
+        ></motion.path>
+      </svg>
+    </div>
   );
 };
