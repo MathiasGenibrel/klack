@@ -1,17 +1,18 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import { CompanyLogo } from "./CompanyLogo.tsx";
+import { useIsHover } from "../../hooks/useIsHover.ts";
 
 export const HomeButton: FC = () => {
-  const [isHover, setIsHover] = useState(false);
+  const hover = useIsHover();
 
   return (
     <a
       href={"/"}
       className={"flex items-center gap-4"}
-      onMouseEnter={() => setIsHover(true)}
-      onMouseLeave={() => setIsHover(false)}
+      onMouseEnter={hover.set}
+      onMouseLeave={hover.unset}
     >
-      <CompanyLogo isHover={isHover} />
+      <CompanyLogo isHover={hover.enabled} />
       <span className={"font-sans text-2xl font-bold"}>Klack</span>
     </a>
   );
