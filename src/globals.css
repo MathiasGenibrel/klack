@@ -5,3 +5,11 @@
 html {
   background-color: theme("colors.primary");
 }
+
+main > * {
+  @apply opacity-0 translate-y-8;
+}
+
+.withDefaultRotation {
+  @apply rotate-2;
+}
