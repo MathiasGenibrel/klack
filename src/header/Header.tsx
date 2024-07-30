@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 
 export const Header: FC = () => {
   return (
-    <section className={"sticky flex justify-between p-8"}>
+    <header className={"sticky flex justify-between p-8"}>
       <HomeButton />
-      <motion.div
+      <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 1.2 }}
@@ -16,7 +16,7 @@ export const Header: FC = () => {
       >
         <ContactLink />
         <DownloadLink />
-      </motion.div>
-    </section>
+      </motion.section>
+    </header>
   );
 };

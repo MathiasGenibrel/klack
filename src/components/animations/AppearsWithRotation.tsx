@@ -29,13 +29,13 @@ export const AppearsWithRotation: FC<AppearsWithRotationProps> = ({
   children,
 }) => {
   return (
-    <motion.div
+    <motion.section
       initial={"initial"}
       animate={"animate"}
       variants={variants}
       transition={transitionConfig}
     >
       {children}
-    </motion.div>
+    </motion.section>
   );
 };
