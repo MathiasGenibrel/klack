@@ -22,7 +22,7 @@ const variants: Variants = {
 
 export const Header: FC = () => {
   return (
-    <header className={"sticky flex justify-between p-8"}>
+    <header className={"sticky flex items-center justify-between p-8"}>
       <HomeButton />
       <motion.section
         className={"flex gap-8"}
