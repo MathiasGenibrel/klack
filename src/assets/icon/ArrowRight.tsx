@@ -3,7 +3,7 @@ import { FC } from "react";
 export const ArrowRight: FC = () => {
   return (
     <svg
-      className="h-6 w-6 stroke-stone-800 stroke-2"
+      className="h-6 w-6 stroke-current stroke-2"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

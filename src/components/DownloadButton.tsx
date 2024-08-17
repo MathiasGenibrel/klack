@@ -1,11 +1,13 @@
-import { FC } from "react";
+import React, { useMemo } from "react";
+import { useIsHover } from "../hooks/useIsHover.ts";
 import clsx from "clsx";
-import { Apple } from "../../assets/icon/Apple.tsx";
-import { useIsHover } from "../../hooks/useIsHover.ts";
 import { motion, Transition } from "framer-motion";
-import { ArrowRight } from "../../assets/icon/ArrowRight.tsx";
+import { Apple } from "../assets/icon/Apple.tsx";
+import { ArrowRight } from "../assets/icon/ArrowRight.tsx";
 
-interface ButtonProps {}
+interface DownloadButtonProps {
+  type?: "primary" | "secondary";
+}
 
 const transitionConfig: Transition = {
   duration: 0.175,
@@ -28,8 +30,19 @@ const variants = {
   },
 };
 
-export const DownloadLink: FC<ButtonProps> = () => {
+export const DownloadButton: React.FC<DownloadButtonProps> = ({
+  type = "primary",
+}) => {
   const hover = useIsHover();
+
+  const style = useMemo(() => {
+    switch (type) {
+      case "primary":
+        return "bg-stone-800 text-white";
+      case "secondary":
+        return "bg-stone-800 bg-opacity-5";
+    }
+  }, [type]);
 
   return (
     <a
@@ -37,8 +50,9 @@ export const DownloadLink: FC<ButtonProps> = () => {
       onMouseLeave={hover.unset}
       href={"/"}
       className={clsx(
-        "relative hidden items-center justify-center gap-2 overflow-hidden rounded-2xl bg-stone-800 bg-opacity-5 px-5 py-4 text-lg font-bold outline-none",
+        "relative hidden items-center justify-center gap-2 overflow-hidden rounded-2xl px-5 py-4 text-lg font-bold outline-none",
         "focus:ring-2 focus:ring-purple-400",
+        style,
         "sm:flex",
       )}
     >

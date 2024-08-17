@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { ContactLink } from "./components/ContactLink.tsx";
-import { DownloadLink } from "./components/DownloadLink.tsx";
 import { HomeButton } from "./components/HomeButton.tsx";
 import { motion, Transition, Variants } from "framer-motion";
+import { DownloadButton } from "../components/DownloadButton.tsx";
 
 export const HEADER_DURATION = 1;
 
@@ -32,7 +32,7 @@ export const Header: FC = () => {
         transition={transitionConfig}
       >
         <ContactLink />
-        <DownloadLink />
+        <DownloadButton type={"secondary"} />
       </motion.section>
     </header>
   );
