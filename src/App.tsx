@@ -29,10 +29,14 @@ function App() {
           <br />
           with every keystroke
         </h1>
-        <section className={"flex items-center gap-4"}>
+        <section
+          className={"flex flex-col gap-8 sm:flex-row sm:items-center sm:gap-4"}
+        >
           <DownloadButton />
-          <Featured.On label={"App Store"} />
-          <Featured.InForbes />
+          <div className={"mr-4 flex gap-4 self-center"}>
+            <Featured.On label={"App Store"} />
+            <Featured.InForbes />
+          </div>
         </section>
       </main>
     </>

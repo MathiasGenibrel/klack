@@ -7,6 +7,7 @@ import { ArrowRight } from "../assets/icon/ArrowRight.tsx";
 
 interface DownloadButtonProps {
   type?: "primary" | "secondary";
+  className?: string;
 }
 
 const transitionConfig: Transition = {
@@ -32,6 +33,7 @@ const variants = {
 
 export const DownloadButton: React.FC<DownloadButtonProps> = ({
   type = "primary",
+  className,
 }) => {
   const hover = useIsHover();
 
@@ -50,8 +52,9 @@ export const DownloadButton: React.FC<DownloadButtonProps> = ({
       onMouseLeave={hover.unset}
       href={"/"}
       className={clsx(
-        "relative hidden items-center justify-center gap-2 overflow-hidden rounded-2xl px-5 py-4 text-lg font-bold outline-none",
+        "relative flex items-center justify-center gap-2 overflow-hidden rounded-2xl px-5 py-4 text-lg font-bold outline-none",
         "focus:ring-2 focus:ring-purple-400",
+        className,
         style,
         "sm:flex",
       )}

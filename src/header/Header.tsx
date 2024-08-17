@@ -32,7 +32,7 @@ export const Header: FC = () => {
         transition={transitionConfig}
       >
         <ContactLink />
-        <DownloadButton type={"secondary"} />
+        <DownloadButton type={"secondary"} className={"hidden"} />
       </motion.section>
     </header>
   );
