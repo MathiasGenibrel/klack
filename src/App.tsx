@@ -5,6 +5,7 @@ import { stagger, useAnimate } from "framer-motion";
 import { useMount } from "./hooks/useMount.ts";
 import { DownloadButton } from "./components/DownloadButton.tsx";
 import { Featured } from "./components/Featured/Featured.tsx";
+import { DemoSection } from "./components/sections/demo/DemoSection.tsx";
 
 const FIRST_LEVEL_CHILDREN = "main > *";
 const START_DELAY = HEADER_DURATION - 0.2; // Header duration minus 200ms
@@ -38,6 +39,7 @@ function App() {
             <Featured.InForbes />
           </div>
         </section>
+        <DemoSection />
       </main>
     </>
   );
