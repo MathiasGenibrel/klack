@@ -2,7 +2,7 @@ import { FC } from "react";
 
 export const BackgroundImage: FC = () => {
   return (
-    <div className="absolute left-0 right-0 top-0 h-48 w-full overflow-hidden rounded-[2.5rem] bg-stone-900 sm:h-full sm:rounded-[3rem]">
+    <div className="absolute left-0 right-0 top-0 hidden h-48 w-full overflow-hidden rounded-[2.5rem] bg-stone-900 sm:block sm:h-full sm:rounded-[3rem]">
       <picture>
         <source
           media="(min-width: 640px)"
