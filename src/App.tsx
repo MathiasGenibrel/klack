@@ -24,7 +24,12 @@ function App() {
   return (
     <>
       <Header />
-      <main ref={scope} className={"flex flex-col gap-12 px-8 text-stone-800"}>
+      <main
+        ref={scope}
+        className={
+          "flex flex-col gap-12 px-8 text-stone-800 sm:mx-auto sm:max-w-screen-lg md:px-0"
+        }
+      >
         <h1 className="withDefaultRotation text-6xl font-bold sm:text-8xl">
           Satisfying <Mark>sound</Mark>
           <br />

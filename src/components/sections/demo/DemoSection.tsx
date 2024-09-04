@@ -6,7 +6,7 @@ import { CurrentDate } from "./components/StatusBar/CurrentDate.tsx";
 
 export const DemoSection: FC = () => {
   return (
-    <section className={"relative h-96"}>
+    <section className={"relative h-96 xl:w-[120%] xl:self-center"}>
       <BackgroundImage />
       <StatusBar.Container>
         <StatusBar.Icon path={<Path.Klack />} />
