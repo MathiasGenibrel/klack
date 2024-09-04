@@ -14,5 +14,5 @@ export const CurrentDate: FC = () => {
     }).format(currentDate);
   }, [currentDate]);
 
-  return <span className={"ml-2 text-orange-50"}>{date}</span>;
+  return <span className={"ml-2 text-orange-50 sm:text-sm"}>{date}</span>;
 };
