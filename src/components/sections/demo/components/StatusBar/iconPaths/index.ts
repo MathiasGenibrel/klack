@@ -5,7 +5,7 @@ import { Wifi } from "./Wifi";
 
 interface IPaths {
   Klack: FC;
-  Wifi: typeof Wifi;
+  Wifi: FC;
   ControlPanel: FC;
 }
 

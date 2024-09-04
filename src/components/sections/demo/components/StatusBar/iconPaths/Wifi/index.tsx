@@ -15,6 +15,38 @@ const CONNECTION_CONFIGURATION = {
   },
 };
 
+interface NetworkInformation {
+  rtt: number;
+  downlink: number;
+}
+
+/**
+ * Returns the connection performance based on the network information
+ * @param networkInfo - The network information
+ * @returns The connection performance, can be null if the network information is equal to 0
+ */
+const getConnectionPerformance = (
+  networkInfo: NetworkInformation,
+): ConnectionPerformance | null => {
+  if (networkInfo.rtt === 0 && networkInfo.downlink === 0) {
+    return null;
+  }
+
+  if (
+    networkInfo.rtt <= CONNECTION_CONFIGURATION.FASTER.rtt ||
+    networkInfo.downlink > CONNECTION_CONFIGURATION.FASTER.downlink
+  )
+    return ConnectionPerformance.FASTER;
+
+  if (
+    networkInfo.rtt <= CONNECTION_CONFIGURATION.MEDIUM.rtt ||
+    networkInfo.downlink > CONNECTION_CONFIGURATION.MEDIUM.downlink
+  )
+    return ConnectionPerformance.MEDIUM;
+
+  return ConnectionPerformance.SLOW;
+};
+
 const CONNECTION = navigator.connection;
 
 export const Wifi: FC = () => {
@@ -30,8 +62,6 @@ export const Wifi: FC = () => {
   useEffect(() => {
     if (CONNECTION) {
       CONNECTION.addEventListener("change", (event) => {
-        console.log("Connection change", event.currentTarget);
-
         event.currentTarget &&
           setNetworkInfo({
             rtt: event.currentTarget.rtt,
@@ -44,22 +74,21 @@ export const Wifi: FC = () => {
   }, []);
 
   return useMemo(() => {
-    if (!networkInfo || (networkInfo.rtt === 0 && networkInfo.downlink === 0)) {
-      return <Disconnected />;
+    if (!networkInfo) {
+      return <WifiIcon performance={ConnectionPerformance.FASTER} />;
     }
 
-    if (
-      networkInfo.rtt <= CONNECTION_CONFIGURATION.FASTER.rtt ||
-      networkInfo.downlink > CONNECTION_CONFIGURATION.FASTER.downlink
-    )
-      return <WifiIcon performance={ConnectionPerformance.FASTER} />;
+    const networkPerformance = getConnectionPerformance(networkInfo);
 
-    if (
-      networkInfo.rtt <= CONNECTION_CONFIGURATION.MEDIUM.rtt ||
-      networkInfo.downlink > CONNECTION_CONFIGURATION.MEDIUM.downlink
-    )
-      return <WifiIcon performance={ConnectionPerformance.MEDIUM} />;
-
-    return <WifiIcon performance={ConnectionPerformance.SLOW} />;
+    switch (networkPerformance) {
+      case ConnectionPerformance.FASTER:
+        return <WifiIcon performance={ConnectionPerformance.FASTER} />;
+      case ConnectionPerformance.MEDIUM:
+        return <WifiIcon performance={ConnectionPerformance.MEDIUM} />;
+      case ConnectionPerformance.SLOW:
+        return <WifiIcon performance={ConnectionPerformance.SLOW} />;
+      default:
+        return <Disconnected />;
+    }
   }, [networkInfo]);
 };
