@@ -4,6 +4,7 @@ import { StatusBar } from "./components/StatusBar";
 import { Path } from "./components/StatusBar/iconPaths";
 import { CurrentDate } from "./components/StatusBar/CurrentDate.tsx";
 import { SongModal } from "./components/SongModal";
+import { Hint } from "./components/Hint.tsx";
 
 export const DemoSection: FC = () => {
   return (
@@ -40,6 +41,8 @@ export const DemoSection: FC = () => {
         <SongModal.Hr />
         <SongModal.SeeMore />
       </SongModal.Container>
+
+      <Hint />
     </section>
   );
 };
