@@ -93,8 +93,8 @@ To get a local copy up and running, follow these example steps.
 
 ## Roadmap
 
-- [ ] Deploy the application using Docker
-- [ ] Automate deployment with GitHub Actions
+- [x] Deploy the application using Docker
+- [x] Automate deployment with GitHub Actions
 - [ ] Setup animations with Framer Motion
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
