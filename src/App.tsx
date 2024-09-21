@@ -27,7 +27,7 @@ function App() {
       <main
         ref={scope}
         className={
-          "flex flex-col gap-12 px-8 text-stone-800 sm:mx-auto sm:max-w-screen-lg md:px-0"
+          "flex flex-col gap-12 px-8 text-stone-800 sm:mx-auto sm:max-w-screen-lg xl:px-0"
         }
       >
         <h1 className="withDefaultRotation text-6xl font-bold sm:text-8xl">
