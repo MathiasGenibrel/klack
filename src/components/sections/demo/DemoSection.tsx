@@ -9,7 +9,9 @@ import { Hint } from "./components/Hint.tsx";
 export const DemoSection: FC = () => {
   return (
     <section
-      className={"relative flex h-96 flex-col gap-4 xl:w-[120%] xl:self-center"}
+      className={
+        "relative flex h-[28rem] flex-col gap-4 xl:w-[120%] xl:self-center"
+      }
     >
       <BackgroundImage />
       <StatusBar.Container>
