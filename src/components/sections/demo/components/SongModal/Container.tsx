@@ -10,7 +10,7 @@ export const Container: FC<ContainerProps> = ({ children }) => {
     <section
       className={clsx(
         "flex w-full flex-col rounded-3xl bg-stone-800 bg-opacity-70 p-4 shadow-2xl backdrop-blur-2xl",
-        "sm:absolute sm:left-7 sm:top-24 sm:w-80",
+        "sm:absolute sm:left-7 sm:top-24 sm:w-[330px]",
         "md:top-7",
       )}
     >

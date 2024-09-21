@@ -46,16 +46,16 @@ export const Button: FC<ButtonProps> = ({ color, label }) => {
     <button
       onClick={clickHandler}
       className={clsx(
-        "duration flex items-center justify-between rounded-lg bg-transparent p-2 transition-all",
+        "flex flex-nowrap justify-between gap-4 rounded-lg bg-transparent p-2 transition-all",
         "hover:bg-stone-400 hover:bg-opacity-20",
       )}
     >
-      <div className={"flex items-center gap-1"}>
+      <div className={"flex flex-grow items-center gap-1"}>
         <IconWithColor color={color} />
-        <span className={"text-primary"}>{label}</span>
+        <span className={"text-nowrap text-primary"}>{label}</span>
       </div>
 
-      <div className={"flex items-center gap-4"}>
+      <div className={"flex min-w-0 flex-shrink items-center gap-2"}>
         <AnimatePresence mode={"popLayout"} initial={false}>
           <motion.span
             transition={{ type: "spring", duration: 0.3, bounce: 0 }}
@@ -73,7 +73,7 @@ export const Button: FC<ButtonProps> = ({ color, label }) => {
             }}
             key={isPreview ? "preview" : "not-preview"}
             className={clsx(
-              "text-sm text-amber-50 text-opacity-60",
+              "overflow-hidden text-ellipsis whitespace-nowrap text-sm text-amber-50 text-opacity-60",
               "sm:text-opacity-0",
             )}
           >
