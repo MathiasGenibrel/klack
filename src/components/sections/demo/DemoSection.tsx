@@ -10,7 +10,7 @@ export const DemoSection: FC = () => {
   return (
     <section
       className={
-        "relative flex h-[28rem] flex-col gap-4 xl:w-[120%] xl:self-center"
+        "relative flex flex-col gap-4 sm:mb-8 sm:h-[38rem] md:h-[34rem] xl:w-[120%] xl:self-center"
       }
     >
       <BackgroundImage />

@@ -6,6 +6,8 @@ import { useMount } from "./hooks/useMount.ts";
 import { DownloadButton } from "./components/DownloadButton.tsx";
 import { Featured } from "./components/Featured/Featured.tsx";
 import { DemoSection } from "./components/sections/demo/DemoSection.tsx";
+import { Features } from "./components/sections/Features";
+import { FeatureType } from "./Feature.tsx";
 
 const FIRST_LEVEL_CHILDREN = "main > *";
 const START_DELAY = HEADER_DURATION - 0.2; // Header duration minus 200ms
@@ -45,6 +47,16 @@ function App() {
           </div>
         </section>
         <DemoSection />
+        <Features.Container>
+          <Features.Feature type={FeatureType.HIGH_FIDELITY_SOUND} />
+          <Features.Feature type={FeatureType.IMMERSIVE_SPATIAL_AUDIO} />
+          <Features.Feature type={FeatureType.INSTANT_TYPE_FEEDBACK} />
+          <Features.Feature type={FeatureType.UP_AND_DOWN_KEYSTROKES} />
+          <Features.Feature type={FeatureType.RANDOMIZED_PITCHING} />
+          <Features.Feature type={FeatureType.CUSTOMIZABLE_SWITCHES} />
+          <Features.Feature type={FeatureType.MENU_BAR_APPLICATION} />
+          <Features.Feature type={FeatureType.BLAZING_FAST} />
+        </Features.Container>
       </main>
     </>
   );

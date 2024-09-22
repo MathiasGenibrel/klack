@@ -7,8 +7,7 @@ export const Hint: FC = () => {
   return (
     <span
       className={clsx(
-        "group flex items-center gap-2 self-center font-medium text-stone-600 opacity-65",
-        "sm:hidden",
+        "group mb-12 mt-4 flex items-center gap-2 self-center font-medium text-stone-600 opacity-65 sm:mb-0 sm:mt-0",
         "md:mr-10 md:flex md:self-end",
       )}
     >
