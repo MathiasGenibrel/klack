@@ -45,7 +45,7 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Klack Copy](public/web-app.png)](https://klack.mathias.run/)
 
 This project is a more or less identical replica of the [tryklack.com](https://tryklack.com/) website. The goal is to learn how to set up animations in a React application, as well as to deploy it on my personal VPS using GitHub Actions.
 
@@ -95,7 +95,7 @@ To get a local copy up and running, follow these example steps.
 
 - [x] Deploy the application using Docker
 - [x] Automate deployment with GitHub Actions
-- [ ] Setup animations with Framer Motion
+- [x] Setup animations with Framer Motion
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
