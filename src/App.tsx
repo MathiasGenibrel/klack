@@ -8,6 +8,8 @@ import { Featured } from "./components/Featured/Featured.tsx";
 import { DemoSection } from "./components/sections/demo/DemoSection.tsx";
 import { Features } from "./components/sections/Features";
 import { FeatureType } from "./Feature.tsx";
+import { CreatedWithSwift } from "./footer/CreatedWithSwift.tsx";
+import { SocialNetwork } from "./footer/SocialNetwork.tsx";
 
 const FIRST_LEVEL_CHILDREN = "main > *";
 const START_DELAY = HEADER_DURATION - 0.2; // Header duration minus 200ms
@@ -29,7 +31,7 @@ function App() {
       <main
         ref={scope}
         className={
-          "flex flex-col gap-12 px-8 text-stone-800 sm:mx-auto sm:max-w-screen-lg xl:px-0"
+          "mb-40 flex flex-col gap-12 px-8 text-stone-800 sm:mx-auto sm:max-w-screen-lg xl:px-0"
         }
       >
         <h1 className="withDefaultRotation text-6xl font-bold sm:text-8xl">
@@ -46,7 +48,9 @@ function App() {
             <Featured.InForbes />
           </div>
         </section>
+
         <DemoSection />
+
         <Features.Container>
           <Features.Feature type={FeatureType.HIGH_FIDELITY_SOUND} />
           <Features.Feature type={FeatureType.IMMERSIVE_SPATIAL_AUDIO} />
@@ -57,7 +61,13 @@ function App() {
           <Features.Feature type={FeatureType.MENU_BAR_APPLICATION} />
           <Features.Feature type={FeatureType.BLAZING_FAST} />
         </Features.Container>
+
+        <DownloadButton className={"mt-12 self-center shadow-2xl"} />
       </main>
+      <footer className={"flex flex-col items-center gap-8 pb-24"}>
+        <CreatedWithSwift />
+        <SocialNetwork />
+      </footer>
     </>
   );
 }
