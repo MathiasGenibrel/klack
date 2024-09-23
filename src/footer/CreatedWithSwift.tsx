@@ -26,9 +26,9 @@ export const CreatedWithSwift: FC = () => {
           }
         />
       </div>
-      <h3 className="relative pr-2 text-center text-xl font-bold text-stone-500 dark:text-orange-50 dark:text-opacity-50">
+      <h3 className="relative pr-2 text-center text-xl font-bold text-stone-500">
         Crafted with Swift<Super>5</Super>
-        <p className="text-center font-bold text-stone-400 dark:text-orange-50 dark:text-opacity-30">
+        <p className="text-center font-bold text-stone-400">
           Built exclusively for your Mac
         </p>
       </h3>
